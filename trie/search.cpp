@@ -1,9 +1,7 @@
 /*
 Code snippet for search operation in Trie
 */
-/*
-Snippet to insert a new word in the trie
-*/
+
 #include <iostream>
 using namespace std;
 
