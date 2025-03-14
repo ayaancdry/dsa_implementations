@@ -96,6 +96,8 @@ Node* insertNode(Node *node, int key) {
     }
     else if (key > node->key) {
         node -> right = insertNode(node->right, key);
+    }
+    else {
         return node;
     }
     node->height = 1 + max(getHeight(node->left), getHeight(node->right));
@@ -137,10 +139,10 @@ int main() {
     Node *root = NULL;
     root = insertNode(root, 45); 
     root = insertNode(root, 5);
-    root = insertNode(root, 5);
+    root = insertNode(root, 6);
     root = insertNode(root, 9);
     root = insertNode(root, 8);
-    root = insertNode(root, 9);
+    root = insertNode(root, 10);
     preOrder(root);
     return 0;
 }
