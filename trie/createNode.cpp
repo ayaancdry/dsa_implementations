@@ -1,6 +1,9 @@
 /*
 Code to create TrieNode
 */
+#include <iostream>
+using namespace std;
+
 class TrieNode {
 public:
         // children array for each node
