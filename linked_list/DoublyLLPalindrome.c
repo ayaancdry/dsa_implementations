@@ -29,8 +29,7 @@ No
 typedef struct Node {
     int data;
     struct Node* next;
-    struct Node* prev; 
-   
+    struct Node* prev;   
 }Node;
 
 Node* head = NULL; //Initialise the head
@@ -122,7 +121,7 @@ int solve() {
     }
 
     while (left != right && left->prev != right) {
-        right->data = left->data; // right side mirrors left side
+        right->data = left->data;
 
         left = left->next;
         right = right->prev;
