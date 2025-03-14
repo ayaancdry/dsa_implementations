@@ -30,10 +30,25 @@ void insert(TrieNode* root, const string& key) {
             TrieNode* newNode = new TrieNode();
             // The newNode created corresponds to the character c of the key. It should point to the designated location
             curr->children[c - 'a'] = newNode;
+        /*
+        Or simply do : 
+        curr->children[c - "a"] = new TrieNode()
+        */
+       
         }
         // After each iteration, move the curr pointer to next level. 
         curr = curr->children[index];
     }
     // At the end of the word, mark the end of the word. 
     curr->isEndofWord = true;
+}
+
+int main () {
+    // Start a trie
+    TrieNode* root = new TrieNode();
+    vector<string> arr = {"and", "ant", "do", "geek", "dad"};
+
+    for (const string& s : arr) {
+        insert(root,s);
+    }
 }
